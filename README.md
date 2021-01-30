@@ -13,3 +13,7 @@ You will be able to:
  - Define the Text Color of the left part (ej. Breaking News:). This color will also be applied as a border for the full news ticker and for a dot separing each headline
  - Define the background color of the left part
  - Define the Text Color of the right part (the headlines from the Collection)
+
+To create something like this:
+
+![liferayFragments](/images/NewsTicker.png)
