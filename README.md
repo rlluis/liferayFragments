@@ -14,6 +14,6 @@ You will be able to:
  - Define the background color of the left part
  - Define the Text Color of the right part (the headlines from the Collection)
 
-To create something like this:
+To create something like this (just the Announcements bar below the Advices' label):
 
 ![liferayFragments](/images/NewsTicker.png)
