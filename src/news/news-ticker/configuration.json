@@ -1,0 +1,54 @@
+{ 
+      "fieldSets": [   
+         {            
+            "label": "Collection",            
+            "fields": [                
+               {                    
+                  "name": "collection",                    
+                  "type": "collectionSelector"                
+               }            
+            ]        
+         },
+				{					
+			"configurationRole": "style",
+			"fields": [
+				{
+					"defaultValue": "300px",
+					"label": "LabelWidth",
+					"name": "widthClass",
+					"type": "text"
+				},
+				{
+					"name": "labelBackground",
+					"label": "Label Background",
+					"type": "colorPalette",
+					"dataType": "object",
+					"defaultValue": {
+						"cssClass": "red",
+						"rgbValue": "rgb(255,0,0)"
+					}
+				},
+				{
+					"name": "labelText",
+					"label": "Label Color Text",
+					"type": "colorPalette",
+					"dataType": "object",
+					"defaultValue": {
+						"cssClass": "white",
+						"rgbValue": "rgb(255,255,255)"
+					}
+				},
+				{
+					"name": "newsTextColor",
+					"label": "News Text Color",
+					"type": "colorPalette",
+					"dataType": "object",
+					"defaultValue": {
+						"cssClass": "blue",
+						"rgbValue": "rgb(0,0,255)"
+					}
+				}
+      ]
+   }
+	]
+}
