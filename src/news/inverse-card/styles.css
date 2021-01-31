@@ -1,0 +1,32 @@
+.card-type-template.card, .card-type-template .card {
+  border-width: 2px;
+  box-shadow: none;
+  color: #272833;
+	text-align:left;
+	border-radius: 10px;
+}
+.minH{
+	min-height:70px;
+}
+.template-card .card-bodys {
+	text-align:left
+}
+.cardImg{
+  height: 100%;
+  display: block;
+  width: 100%;
+  -o-object-fit: cover;
+  object-fit: cover;
+  -o-object-position: center;
+  object-position: center;
+	min-height:200px;
+}
+.myCard{
+  padding-top: 1.5em;
+  padding-bottom: 1.5em;
+	padding-left: 10px;
+	padding-right:10px;
+}
+.component-card img {
+	max-width: 100%;
+}
