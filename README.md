@@ -11,9 +11,12 @@ Up to now this collection only includes two fragments.
 The first one is a news ticker that will show a scrolling electronic display of a Collecion defined in Liferay. You will be able to:
 
  - Configure the Collection
+ - Configure a template to show the items of the collection (WARNING: there's a dependency with [Evan's article template contributor (stop using ServiceLocator)][3]
  - Define the Text Color of the left part (ej. Breaking News:). This color will also be applied as a border for the full news ticker and for a dot separing each headline
  - Define the background color of the left part
  - Define the Text Color of the right part (the headlines from the Collection)
+
+[3]: https://github.com/lfrsales/article-service-template-context-contributor
 
 To create something like this (just the Announcements bar below the Advices' label):
 
