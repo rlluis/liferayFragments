@@ -6,7 +6,13 @@
                {                    
                   "name": "collection",                    
                   "type": "collectionSelector"                
-               }            
+               }  ,
+							{
+								"label": "Template",
+								"type": "text",
+								"defaultValue": "TemplateId",
+								"name": "myTemplate"
+							}
             ]        
          },
 				{					
@@ -17,6 +23,16 @@
 					"label": "LabelWidth",
 					"name": "widthClass",
 					"type": "text"
+				},
+				{
+					"name": "newsBackground",
+					"label": "News Background",
+					"type": "colorPalette",
+					"dataType": "object",
+					"defaultValue": {
+						"cssClass": "red",
+						"rgbValue": "rgb(255,0,0)"
+					}
 				},
 				{
 					"name": "labelBackground",
