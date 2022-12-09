@@ -33,3 +33,5 @@ The third one is a SLIDER, based on the awesome JQuery slider work by the author
  - Create a Slider with a Collection very easy
  - The Fragment needs to be added as the main one to be used in the Collection, leaving the collection configuration (Grid, etc.) as it is by default
  - The Fragment let you configure different settings for the Slider like its type (Full, Centered, Fade), Colors of the arrows, Dots, speed, etc.
+
+ ![liferayFragments](/images/NewsSlider.png)
