@@ -1,17 +1,61 @@
+<style type="text/css">
+.news-scroll a, .news-scroll span{
+	color:${configuration.newsTextColor.rgbValue}
+}
+.news-scroll a:hover{
+	text-decoration:underline;
+}
+</style>
+<script>
+function loadRenderedContent(divID,content,template) {
+   Liferay.Util.fetch(
+      '/o/headless-delivery/v1.0/structured-contents/' + content + '/rendered-content/' + template
+    ).then(
+      response => {
+        const { status } = response;
+
+        const responseContentType = response.headers.get('content-type');
+
+        if (status === 204) {
+          return { status };
+        }
+        else if (response.ok && responseContentType === 'application/json') {
+          return response.json();
+        }
+        else {
+          return response.text();
+        }
+      }
+    ).then(response => {
+			document.getElementById(divID).innerHTML=response;	
+		}
+	)
+
+}
+</script>
 <div class="fragmentNews">
     <div class="row">
         <div class="col-md-12" style="padding-right:0px;padding-left:0px">
             <div  style="background-color:${configuration.newsBackground.rgbValue};border:1px ${configuration.newsBackground.rgbValue} solid" class="d-flex justify-content-between align-items-center breaking-news">
               <div style="background-color:${configuration.labelBackground.rgbValue};width: ${configuration.widthClass};color:${configuration.labelText.rgbValue}" class="d-flex flex-row flex-grow-1 flex-fill justify-content-center py-2 px-1">
-									<span class="d-flex align-items-center" data-lfr-editable-id="element-texte"	data-lfr-editable-type="text">Parking Announcements:</span>
+									<span class="d-flex align-items-center" data-lfr-editable-id="element-texte"	data-lfr-editable-type="text">Main title:</span>
 							</div>
                 <marquee class="news-scroll" behavior="scroll" direction="left" onmouseover="this.stop();" onmouseout="this.start();"> 
 									[#list collectionObjectList as item]
 									[#assign curEntryPK = item.resourcePrimKey]
+									[#if (configuration.dots)]
+										<span style="background-color:${configuration.newsTextColor.rgbValue}" class="dot"></span> 
+									[/#if]							  
+									<span id="anchor${item?index}">
+									[#if articleService??]
 									[#assign journalArticle = articleService.getContentByClassPK(curEntryPK,configuration.myTemplate)]
-								  	<span style="background-color:${configuration.newsTextColor.rgbValue}" class="dot"></span> 
-										<a href="#" style="color:${configuration.newsTextColor.rgbValue};margin-right:20px;">${journalArticle}</a> 
+										${journalArticle}
+									[#else]
+											<script>var valor=loadRenderedContent("anchor${item?index}",${curEntryPK},${configuration.myTemplate});</script>																
+									[/#if]
+									</span>
 									[/#list]
+
 										
 							</marquee>
             </div>

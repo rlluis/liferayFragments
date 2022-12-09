@@ -4,6 +4,6 @@
   "htmlPath": "index.html",
   "cssPath": "index.css",
   "icon": "code",
-  "name": "news-ticker",
+  "name": "news-slider",
   "type": "component"
 }

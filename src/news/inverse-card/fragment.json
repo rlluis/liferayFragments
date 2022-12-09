@@ -1,8 +1,9 @@
 {
-  "cssPath": "styles.css",
   "configurationPath": "configuration.json",
+  "jsPath": "index.js",
   "htmlPath": "index.html",
-  "jsPath": "main.js",
-  "name": "inverseCard",
+  "cssPath": "index.css",
+  "icon": "code",
+  "name": "inverse-card",
   "type": "component"
 }

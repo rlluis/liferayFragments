@@ -1,9 +1,16 @@
 .card-type-template.card, .card-type-template .card {
-  border-width: 2px;
   box-shadow: none;
   color: #272833;
 	text-align:left;
-	border-radius: 10px;
+}
+.card-type-template.card {
+
+}
+.card-type-template.card:hover{
+border-radius: 10px;
+border-width: 1px;
+border-color:grey;
+box-shadow:0.3em 0.3em 1em rgba(0,0,0,0.3);
 }
 .minH{
 	min-height:70px;

@@ -1,0 +1,43 @@
+<div class="mainContainer">
+	<div class="buttonsWrapper container">
+
+	</div>
+	<div class="slickDots container">
+
+	</div>	
+	<lfr-drop-zone></lfr-drop-zone>
+</div>
+
+<script language="javascript">
+  var numberSlides=${configuration.slidesShow};
+  var sliderInfinite=${configuration.infinite?c};
+  var sliderAutoplay=${configuration.autoplay?c};	
+	var sliderAutoplaySpeed=${configuration.autoplaySpeed};
+  var sliderSpeed=${configuration.speed};											 
+	var centerMode=false;
+	var adaptiveHeight=${configuration.adaptiveHeight?c};											 
+	var fadeMode=false;
+	var sliderDots=${configuration.dots?c};									 
+	[#if (configuration.typeList=="Fade")]
+			numberSlides=1;
+			fadeMode=true;	 
+	[/#if]
+	[#if (configuration.typeList=="Centered")]
+			centerMode=true;	 
+	[/#if]	 
+	var centerPadding='${configuration.centerPadding}';
+</script>
+<style type="text/css">
+.mainContainer .btn{
+  background-color:${configuration.backButtonColor.rgbValue};
+  color:${configuration.frontButtonColor.rgbValue};
+}
+.slick-dots li.slick-active button:before
+{
+	color: ${configuration.backButtonColor.rgbValue};
+}
+.slick-dots li button:before
+{	
+	color: ${configuration.backButtonColor.rgbValue};
+}
+</style>

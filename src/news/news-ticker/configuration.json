@@ -25,6 +25,13 @@
 					"type": "text"
 				},
 				{
+                    "name": "dots",
+                    "label": "Dots",
+                    "description": "Dots",
+                    "type": "checkbox",
+                    "defaultValue": false
+        },				
+				{
 					"name": "newsBackground",
 					"label": "News Background",
 					"type": "colorPalette",
