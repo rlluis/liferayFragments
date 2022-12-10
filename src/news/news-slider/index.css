@@ -1,10 +1,5 @@
 .mainContainer {
 position: relative;
-    min-height: 360px;
-	max-height:550px;
-}
-.mainContainer .slick-slide img{
- max-height:200px;
 }
 .buttonsWrapper{
 z-index: 2;
