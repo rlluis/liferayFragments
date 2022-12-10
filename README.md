@@ -33,5 +33,6 @@ The third one is a SLIDER, based on the awesome JQuery slider work by the author
  - Create a Slider with a Collection Display Fragment in a very easy way. No need to create ADT for Asset Publisher, just Fragments (News Slider and Collection Display Fragment)
  - The Fragment just needs to be added as the main one to be used in the Collection, leaving the collection configuration (Grid, etc.) as it is by default
  - The Fragment let you configure different settings for the Slider like its type (Full, Centered, Fade), Colors of the arrows, Dots, speed, etc.
+ - For the EDIT mode to work, the JQuery will be loaded just one second after everything is loaded (only if edit mode). Pending to make this better but working on my tests so far
 
  ![liferayFragments](/images/NewsSlider.png)

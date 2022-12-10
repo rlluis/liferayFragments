@@ -26,6 +26,15 @@
 			centerMode=true;	 
 	[/#if]	 
 	var centerPadding='${configuration.centerPadding}';
+
+[#assign
+	is_edit_mode = (paramUtil.getString(themeDisplay.getRequest(), "p_l_mode", "") == "edit")/]
+var timeOut=0;
+[#if (is_edit_mode)]
+timeOut=1000;
+[/#if]
+						 
+								 
 </script>
 <style type="text/css">
 .mainContainer .btn{

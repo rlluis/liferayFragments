@@ -1,7 +1,10 @@
-$(document).ready(function(){
+window.setTimeout(function(){
  var coll=$('.mainContainer').find('.lfr-layout-structure-item-collection');
-var sliderCandidate = coll.children('div')[0];
-	
+	console.log("1"+coll.attr('class'));		
+	coll.find('.row').wrapAll( "<div class='mySlider' />");
+  
+	sliderCandidate = coll.find('.mySlider');
+console.log("2"+sliderCandidate.attr('class'));
 	$(sliderCandidate).slick({
     autoplay: sliderAutoplay,
 	  infinite: sliderInfinite,
@@ -19,4 +22,4 @@ var sliderCandidate = coll.children('div')[0];
 		nextArrow:'<button class="btn slick-next" type="button"><svg class="lexicon-icon lexicon-icon-angle-right" focusable="false" role="presentation"><use href="/o/classic-theme/images/clay/icons.svg#angle-right" /></svg><span class="sr-only">Next</span></button>',
 		appendDots: 'div.slickDots'		
   });
-});
+},timeOut);
