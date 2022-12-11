@@ -1,0 +1,61 @@
+<style type="text/css">
+.slidering{
+  box-shadow: none;
+  color: #272833;
+	text-align:left;
+}
+.slidering:hover{
+border-radius: 10px;
+border-width: 1px;
+border-color:grey;
+box-shadow:0.3em 0.3em 1em rgba(0,0,0,0.3);
+}
+.minH{
+	min-height:70px;
+}
+.template-card .card-bodys {
+	text-align:left
+}
+.slidering .cardImg{
+  height: 100%;
+  display: block;
+  width: 100%;
+  -o-object-fit: cover;
+  object-fit: cover;
+  -o-object-position: center;
+  object-position: center;
+	max-height:200px;
+}
+.slidering .myCard{
+  padding-top: 1.5em;
+  padding-bottom: 1.5em;
+	padding-left: 10px;
+	padding-right:10px;
+}
+.slidering .component-card img {
+	max-width: 100%;
+}
+</style>
+<div class="slidering card card-type-template template-card">
+	<div class="card-bodys myCard">
+		<div class="clearfix">
+			<h4>
+			<#if (txtTitle.getData())??>
+					<a href="${friendlyURL}">
+						${txtTitle.getData()}
+					</a>
+			</#if>	
+			</h4>
+		</div>
+		<div class="clearfix minH">
+			<#if (txtHeader.getData())??>
+				${txtHeader.getData()}
+			</#if>
+		</div>
+		</div>
+		<div class="card-item-first">
+			<#if (txtImage.getData())?? && txtImage.getData() != "">
+	<img class="cardImg" alt="${txtImage.getAttribute("alt")}" data-fileentryid="${txtImage.getAttribute("fileEntryId")}" src="${txtImage.getData()}" />
+</#if>
+	</div>
+</div>

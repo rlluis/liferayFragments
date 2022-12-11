@@ -1,0 +1,129 @@
+{ 
+      "fieldSets": [   
+         {            
+            "label": "Collection",            
+            "fields": [                
+               {                    
+                  "name": "collection",                    
+                  "type": "collectionSelector"                
+               }  ,
+							{
+								"label": "Template",
+								"type": "text",
+								"defaultValue": "TemplateId",
+								"name": "myTemplate"
+							},
+                {
+                    "name": "typeList",
+                    "label": "Type of Slider",
+									"description": "Type of Slider",
+                    "type": "select",
+                    "dataType": "string",
+                    "typeOptions": {
+                        "validValues": [
+                            {
+															"label": "Full Offset", 
+															"value": "Full"
+														},
+                            {
+															"label": "Centered", 
+															"value": "Centered"
+														},
+                            {
+														 "label": "Fade", 
+														 "value": "Fade"
+														}
+                        ]
+                    },
+                    "defaultValue": "Full"
+                },
+				{
+					"dataType": "string",
+					"defaultValue": "2",
+					"label": "Slides to Show",
+					"name": "slidesShow",
+					"type": "text",
+				},
+                {
+                    "name": "autoplay",
+                    "label": "Auto Play",
+                    "description": "Auto Play",
+                    "type": "checkbox",
+                    "defaultValue": false
+                },
+				{
+					"dataType": "string",
+					"defaultValue": "300",
+					"label": "Autoplay Speed",
+					"name": "autoplaySpeed",
+					"type": "text",
+				},
+				{
+					"dataType": "string",
+					"defaultValue": "300",
+					"label": "Fade/Animation Speed",
+					"name": "speed",
+					"type": "text",
+				},				
+				{
+					"dataType": "string",
+					"defaultValue": "60px",
+					"label": "Center Padding",
+					"name": "centerPadding",
+					"type": "text",
+				},
+
+				{
+                    "name": "infinite",
+                    "label": "Infinite",
+                    "description": "Infinite",
+                    "type": "checkbox",
+                    "defaultValue": false
+                },
+				{
+                    "name": "arrows",
+                    "label": "Arrows",
+                    "description": "Arrows",
+                    "type": "checkbox",
+                    "defaultValue": true
+                },	
+
+				{
+                    "name": "dots",
+                    "label": "Dots",
+                    "description": "Dots",
+                    "type": "checkbox",
+                    "defaultValue": false
+                },	
+                {
+                    "name": "adaptiveHeight",
+                    "label": "Adaptive Height",
+                    "description": "Adaptive Height",
+                    "type": "checkbox",
+                    "defaultValue": true
+                },				
+                {
+                    "name": "backButtonColor",
+                    "label": "Button Back Color",
+                    "type": "colorPalette",
+                    "dataType": "object",
+                    "defaultValue": {
+                        "cssClass": "black",
+                        "rgbValue": "rgb(0,0,0)"
+                    }
+                },
+{
+                    "name": "frontButtonColor",
+                    "label": "Button Front Color",
+                    "type": "colorPalette",
+                    "dataType": "object",
+                    "defaultValue": {
+                        "cssClass": "white",
+                        "rgbValue": "rgb(255,255,255)"
+                    }
+                }				
+							
+            ]        
+         }
+      ]
+}

@@ -10,6 +10,13 @@
 					"type": "text",
 				},
 				{
+                    "name": "transition",
+                    "label": "transition",
+                    "description": "Transition",
+                    "type": "checkbox",
+                    "defaultValue": true
+        },				
+				{
 					"dataType": "string",
 					"defaultValue": "h1",
 					"label": "heading-level",

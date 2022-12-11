@@ -1,0 +1,11 @@
+<span class="titularNot" style="padding-right:30px"><#assign txtDate_Data = getterUtil.getString(txtDate.getData())>
+<#if validator.isNotNull(txtDate_Data)>
+	<#assign txtDate_DateObj = dateUtil.parseDate("yyyy-MM-dd", txtDate_Data, locale)>
+
+	${dateUtil.getDate(txtDate_DateObj, "dd MMM yyyy - HH:mm:ss", locale)}
+</#if>
+&nbsp;-&nbsp;
+<#if (txtTitle.getData())??>
+	<a href="${friendlyURL}">${txtTitle.getData()}</a>
+</#if>
+</span>

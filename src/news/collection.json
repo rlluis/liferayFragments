@@ -1,4 +1,4 @@
 {
   "name": "News",
-  "description": "a collection of fragments to display News"
+  "description": "A collection of fragments to display News in different ways including Ticker, Slider and a Card"
 }

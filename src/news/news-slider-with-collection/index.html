@@ -1,0 +1,99 @@
+<script>
+function loadRenderedContent(divID,content,template) {
+   Liferay.Util.fetch(
+      '/o/headless-delivery/v1.0/structured-contents/' + content + '/rendered-content/' + template
+    ).then(
+      response => {
+        const { status } = response;
+
+        const responseContentType = response.headers.get('content-type');
+
+        if (status === 204) {
+          return { status };
+        }
+        else if (response.ok && responseContentType === 'application/json') {
+          return response.json();
+        }
+        else {
+          return response.text();
+        }
+      }
+    ).then(response => {
+			document.getElementById(divID).innerHTML=response;	
+		}
+	)
+
+}
+</script>
+<div class="${fragmentEntryLinkNamespace}_mainContainer mainContainer">
+	<div class="${fragmentEntryLinkNamespace}_buttonsWrapper buttonsWrapper container">
+
+	</div>
+	<div class="${fragmentEntryLinkNamespace}_slickDots slickDots container">
+
+	</div>	
+  <div class="${fragmentEntryLinkNamespace}_mainSlider">
+		
+[#list collectionObjectList as item]
+									[#assign curEntryPK = item.resourcePrimKey]
+									<div id="anchor${item?index}">
+									[#if articleService??]
+									[#assign journalArticle = articleService.getContentByClassPK(curEntryPK,configuration.myTemplate)]
+										${journalArticle}
+									[#else]
+											<script>var valor=loadRenderedContent("anchor${item?index}",${curEntryPK},${configuration.myTemplate});</script>																
+									[/#if]
+									</div>
+									[/#list]
+	</div>
+</div>
+<script language="javascript">
+  var ${fragmentEntryLinkNamespace}_numberSlides=${configuration.slidesShow};
+  var ${fragmentEntryLinkNamespace}_sliderInfinite=${configuration.infinite?c};
+  var ${fragmentEntryLinkNamespace}_sliderAutoplay=${configuration.autoplay?c};	
+	var ${fragmentEntryLinkNamespace}_sliderAutoplaySpeed=${configuration.autoplaySpeed};
+  var ${fragmentEntryLinkNamespace}_sliderSpeed=${configuration.speed};											 
+	var ${fragmentEntryLinkNamespace}_centerMode=false;
+	var ${fragmentEntryLinkNamespace}_adaptiveHeight=${configuration.adaptiveHeight?c};											 
+  var ${fragmentEntryLinkNamespace}_arrows=${configuration.arrows?c};																										 
+	var ${fragmentEntryLinkNamespace}_fadeMode=false;
+	var ${fragmentEntryLinkNamespace}_sliderDots=${configuration.dots?c};	
+  var ${fragmentEntryLinkNamespace}_sliderName="${fragmentEntryLinkNamespace}-mySlider";
+	[#if (configuration.typeList=="Fade")]
+			${fragmentEntryLinkNamespace}_numberSlides=1;
+			${fragmentEntryLinkNamespace}_fadeMode=true;	 
+	[/#if]
+	[#if (configuration.typeList=="Centered")]
+			${fragmentEntryLinkNamespace}_centerMode=true;	 
+	[/#if]	 
+	var ${fragmentEntryLinkNamespace}_centerPadding='${configuration.centerPadding}';
+
+[#assign
+	is_edit_mode = (paramUtil.getString(themeDisplay.getRequest(), "p_l_mode", "") == "edit")/]
+var ${fragmentEntryLinkNamespace}_timeOut=0;
+[#if (is_edit_mode)]
+${fragmentEntryLinkNamespace}_timeOut=1000;
+[/#if]		
+window.setTimeout(function(){
+ var sliderCandidate=$('.${fragmentEntryLinkNamespace}_mainSlider');
+ 
+	$(sliderCandidate).slick({
+    autoplay: ${fragmentEntryLinkNamespace}_sliderAutoplay,
+	  infinite: ${fragmentEntryLinkNamespace}_sliderInfinite,
+    slidesToShow: ${fragmentEntryLinkNamespace}_numberSlides,
+    slidesToScroll: ${fragmentEntryLinkNamespace}_numberSlides,
+		arrows: ${fragmentEntryLinkNamespace}_arrows, 
+		dots: ${fragmentEntryLinkNamespace}_sliderDots,
+		fade: ${fragmentEntryLinkNamespace}_fadeMode,
+    centerMode: ${fragmentEntryLinkNamespace}_centerMode,
+    centerPadding: ${fragmentEntryLinkNamespace}_centerPadding,		
+		speed: ${fragmentEntryLinkNamespace}_sliderSpeed,
+		autoplaySpeed: ${fragmentEntryLinkNamespace}_sliderAutoplaySpeed,
+		adaptiveHeight: ${fragmentEntryLinkNamespace}_adaptiveHeight,
+		appendArrows: 'div.${fragmentEntryLinkNamespace}_buttonsWrapper',
+		prevArrow:'<button class="btn slick-prev" type="button"><svg class="lexicon-icon lexicon-icon-angle-left" focusable="false" role="presentation"><use href="/o/classic-theme/images/clay/icons.svg#angle-left" /></svg><span class="sr-only">Previous</span></button>',
+		nextArrow:'<button class="btn slick-next" type="button"><svg class="lexicon-icon lexicon-icon-angle-right" focusable="false" role="presentation"><use href="/o/classic-theme/images/clay/icons.svg#angle-right" /></svg><span class="sr-only">Next</span></button>',
+		appendDots: 'div.${fragmentEntryLinkNamespace}_slickDots'		
+  });
+},${fragmentEntryLinkNamespace}_timeOut);
+</script>
