@@ -26,7 +26,7 @@ To create something like this (just the Announcements bar below the Advices' lab
 Inverse-Card is a Card with the image below the text body and covering the space with a image. You will be able to:
 
  - Configure the type of Header (H1, H2, etc.) for the title of the card
- - You can also configure the max size of the image and decide if the card hsa a transiition for Hover or not (a border and shadow on hover)
+ - You can also configure the max size of the image and decide if the card hsa a transiition for Hover or not and up to 3 different transition effects
  
  ![liferayFragments](/images/InverseCard.png)
  
