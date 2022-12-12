@@ -49,6 +49,7 @@ function loadRenderedContent(divID,content,template) {
 </div>
 <script language="javascript">
   var ${fragmentEntryLinkNamespace}_numberSlides=${configuration.slidesShow};
+	var ${fragmentEntryLinkNamespace}_slidesToScroll=${configuration.slidesShow};	
   var ${fragmentEntryLinkNamespace}_sliderInfinite=${configuration.infinite?c};
   var ${fragmentEntryLinkNamespace}_sliderAutoplay=${configuration.autoplay?c};	
 	var ${fragmentEntryLinkNamespace}_sliderAutoplaySpeed=${configuration.autoplaySpeed};
@@ -64,7 +65,8 @@ function loadRenderedContent(divID,content,template) {
 			${fragmentEntryLinkNamespace}_fadeMode=true;	 
 	[/#if]
 	[#if (configuration.typeList=="Centered")]
-			${fragmentEntryLinkNamespace}_centerMode=true;	 
+			${fragmentEntryLinkNamespace}_centerMode=true;	
+			${fragmentEntryLinkNamespace}_slidesToScroll=1;																						 
 	[/#if]	 
 	var ${fragmentEntryLinkNamespace}_centerPadding='${configuration.centerPadding}';
 
@@ -74,14 +76,14 @@ var ${fragmentEntryLinkNamespace}_timeOut=0;
 [#if (is_edit_mode)]
 ${fragmentEntryLinkNamespace}_timeOut=1000;
 [/#if]		
-window.setTimeout(function(){
+$(document).ready(function(){
  var sliderCandidate=$('.${fragmentEntryLinkNamespace}_mainSlider');
  
 	$(sliderCandidate).slick({
     autoplay: ${fragmentEntryLinkNamespace}_sliderAutoplay,
 	  infinite: ${fragmentEntryLinkNamespace}_sliderInfinite,
     slidesToShow: ${fragmentEntryLinkNamespace}_numberSlides,
-    slidesToScroll: ${fragmentEntryLinkNamespace}_numberSlides,
+    slidesToScroll:  ${fragmentEntryLinkNamespace}_slidesToScroll,
 		arrows: ${fragmentEntryLinkNamespace}_arrows, 
 		dots: ${fragmentEntryLinkNamespace}_sliderDots,
 		fade: ${fragmentEntryLinkNamespace}_fadeMode,
@@ -95,5 +97,5 @@ window.setTimeout(function(){
 		nextArrow:'<button class="btn slick-next" type="button"><svg class="lexicon-icon lexicon-icon-angle-right" focusable="false" role="presentation"><use href="/o/classic-theme/images/clay/icons.svg#angle-right" /></svg><span class="sr-only">Next</span></button>',
 		appendDots: 'div.${fragmentEntryLinkNamespace}_slickDots'		
   });
-},${fragmentEntryLinkNamespace}_timeOut);
+});
 </script>
