@@ -1,19 +1,18 @@
 <style type="text/css">
 .slidering{
   box-shadow: none;
-  color: #272833;
 	text-align:left;
+	margin-right:1em;
 }
 .slidering:hover{
 border-radius: 10px;
-border-width: 1px;
-border-color:grey;
 box-shadow:0.3em 0.3em 1em rgba(0,0,0,0.3);
+border: 1px solid grey;
 }
-.minH{
+.slidering .minH{
 	min-height:70px;
 }
-.template-card .card-bodys {
+.slidering .card-bodys {
 	text-align:left
 }
 .slidering .cardImg{
@@ -32,11 +31,8 @@ box-shadow:0.3em 0.3em 1em rgba(0,0,0,0.3);
 	padding-left: 10px;
 	padding-right:10px;
 }
-.slidering .component-card img {
-	max-width: 100%;
-}
 </style>
-<div class="slidering card card-type-template template-card">
+<div class="slidering">
 	<div class="card-bodys myCard">
 		<div class="clearfix">
 			<h4>

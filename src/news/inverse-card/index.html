@@ -22,10 +22,22 @@
 [#if (configuration.transition)]
 	<style type="text/css">
 	.card-type-template:hover{
+[#if (configuration.transitionType=="Border")]
 	border-radius: 10px;
 	border-width: 1px;
 	border-color:grey;
 	box-shadow:0.3em 0.3em 1em rgba(0,0,0,0.3);
+[/#if]
+[#if (configuration.transitionType=="FillColor")]
+	border-radius: 10px;
+	border-width: 1px;
+	border-color: var(--color-brand-secondary, #292152);
+	background-color: var(--color-brand-secondary, #292152);;
+[/#if]
+[#if (configuration.transitionType=="LightZoom")]
+  transform: scale(1.04);
+[/#if]
+		
 	}
 	</style>
 [/#if]

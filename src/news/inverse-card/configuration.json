@@ -18,6 +18,26 @@
         },				
 				{
 					"dataType": "string",
+					"defaultValue": "Type 1",
+					"label": "Type of Transition",
+					"name": "transitionType",
+					"type": "select",
+					"typeOptions": {
+						"validValues": [
+							{
+								"value": "Border"
+							},
+							{
+								"value": "FillColor"
+							},
+							{
+								"value": "LightZoom"
+							}
+						]
+					}
+				},
+				{
+					"dataType": "string",
 					"defaultValue": "h1",
 					"label": "heading-level",
 					"name": "headingLevel",
