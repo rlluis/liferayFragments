@@ -37,7 +37,7 @@ News-Slider is a SLIDER, based on the awesome JQuery slider work by the author's
  - In a Content Page you will then add news-slider Fragment and then drop a Collection Display Fragment on it. Then leave the collection configuration (Grid, etc.) as it is by default
  - The Fragment lets you configure different settings for the Slider like its type (Full, Centered, Fade), Colors of the arrows, Dots, speed, etc.
  - For the EDIT mode to work, the JQuery will be loaded just one second after everything is loaded (only if edit mode). Pending to make this better but working on my tests so far
- - NOTE: the first time you add it while editing the page it won't work. You may need to save and come back to edit mode to see it's there working and now you can configure better the different parameters. Same will happen if you change a parameter: it will work once you save it.
+ - NOTE: the first time you add it while editing the page it won't work. You may need to save and come back to edit mode to see it's there working and now you can configure better the different parameters. Same will happen if you change a parameter: it will work once you save it and Publish. Unfortunately the DOM modification that is done here creates some problems when the DOM changes while editing. If you need a more stable version, use the next version of the slider (News Slider With Collection) where you will need a template, however
  - NOTE2: the fragment takes into account that you may want to add two or more instances in a page. It's possible, no problem.
 
  ![liferayFragments](/images/NewsSlider.png)
