@@ -36,6 +36,7 @@ News-Slider is a SLIDER, based on the awesome JQuery slider work by the author's
  - First step is to add the dependencies with Slick Slider. For that you need to create two remote apps, one for CSS and another one for JS and configure them in a Master Page. To map the dependencies please use this URLs:
  
  JS --> https://cdn.jsdelivr.net/gh/rlluis/liferayFragments@v1.1.4/remoteCSS%26JS/slick.min.js
+ 
  CSS --> https://cdn.jsdelivr.net/gh/rlluis/liferayFragments@v1.1.4/remoteCSS%26JS/slick.css
  
  - In a Content Page you will then add news-slider Fragment and then drop a Collection Display Fragment on it. Then leave the collection configuration (Grid, etc.) as it is by default
