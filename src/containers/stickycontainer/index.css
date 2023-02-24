@@ -1,0 +1,11 @@
+.InsideSticky{
+	position:sticky;
+	top:0;
+	z-index:2;	
+}
+.has_controlpanel{
+ top:56px ! important;
+}
+.has_publications{
+ top:80px ! important;
+}
