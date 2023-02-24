@@ -1,12 +1,16 @@
-# News
-
 This project has been created with [generator-liferay-fragments][1]. You can read
 how to manage this project in the [generator documentation][2].
 
 [1]: https://www.npmjs.com/package/generator-liferay-fragments
 [2]: https://www.npmjs.com/package/generator-liferay-fragments#usage
 
-Up to now this collection includes four different fragments, CSS & JS files to be configured as remote apps, and some examples of News Structure and Templates.
+Up to now this collection includes five different fragments, CSS & JS files to be configured as remote apps, and some examples of News Structure and Templates.
+
+# Sticky
+ A Sticky fragment with pure CSS and just JS to adjust when Control Panel or Publications is active and deactivate it if in edit mode
+
+
+# News
 
 The NEWS TICKER will show a scrolling electronic display of a Collecion defined in Liferay, now also compatible with LXC!. You will be able to:
 
