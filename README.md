@@ -6,8 +6,8 @@ how to manage this project in the [generator documentation][2].
 
 Up to now this collection includes five different fragments, CSS & JS files to be configured as remote apps, and some examples of News Structure and Templates.
 
-# Sticky
- A Sticky fragment with pure CSS and just JS to adjust when Control Panel or Publications is active and deactivate it if in edit mode
+# Containers
+ A Sticky container fragment with pure CSS and just JS to adjust when Control Panel or Publications is active and deactivate it if in edit mode, 100% friendly with Liferay and easy to use. NOTE: you need to add the fragment to a Master Page template (so you have the CSS class) and then add a Normal Container in the page and add the CSS Class to this normal container in the advanced tab. All this is because of a bug that wil be solved in the future, but it's easy anyways
 
 
 # News
