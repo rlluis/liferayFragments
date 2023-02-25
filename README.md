@@ -8,6 +8,7 @@ Up to now this collection includes five different fragments, CSS & JS files to b
 
 # Containers
 A Sticky container fragment with pure CSS and just JS to adjust when Control Panel or Publications is active and deactivate it if in edit mode, 100% friendly with Liferay and easy to use. 
+
 NOTE: you need to add the fragment to a Master Page template (so you have the CSS class and the JS) and then add a Normal Container in the page and add the CSS Class to this normal container in the advanced tab. All this is because of a bug that wil be solved in the future, but it's easy anyways. The current bug is that for the sticky to work, the sticky class needs to be added two divs in the tree before the actual div. The only way of doing this wihout complex code is to add a class in the advanced tab of a normal container as this class (sticky) will be correctly placed in the tree of divs.
 Another way could be to create a CSS a JS and add both in the Master Page configuration and repeat again the steps above adding a normal container and adding the sticky class (from the remote's CSS) here
 
