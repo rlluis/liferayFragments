@@ -1,0 +1,56 @@
+[#assign totalPages=configuration.numberOfPages/]
+
+[#assign myPage=layout.getFriendlyURL()/]
+[#assign myPageURLLenght=layout.getFriendlyURL()?length/]
+[#attempt]
+[#assign myPage=myPage[myPage?lastIndexOf("-")+1..myPageURLLenght-1]/]
+[#recover]
+  [#assign myPage=1/]
+[/#attempt]
+[#attempt]
+ [#assign num=myPage?number/]
+[#recover]
+  [#assign num=1/]
+[/#attempt]
+[#if num>totalPages]
+  [#assign num=1/]
+[/#if]
+
+[#assign prevDisabled=""/]
+[#assign nextDisabled=""/]
+[#if num<=1]
+  [#assign prevDisabled="disabled"/]
+[/#if]
+[#if num==totalPages]
+  [#assign nextDisabled="disabled"/]
+[/#if]
+
+<div class="fragment_894">
+	<nav aria-label="...">
+  <ul class="pagination pagination-lg">
+    <li class="page-item ${prevDisabled}">
+      [#if prevDisabled=="disabled"]
+			<span class="page-link" tabindex="-1">Previous</span>
+			[#else]
+			<a class="page-link" href="/web/guest/wizard-${num-1}">Previous</a>
+			[/#if]	
+    </li>
+		
+		[#list 1..totalPages as i]
+			[#if i?index+1==num]
+				<li class="page-item active"><span class="page-link">${i}<span class="sr-only">(current)</span></span></li>
+			[#else]
+				<li class="page-item"><a class="page-link" href="/web/guest/wizard-${i}">${i}</a></li>
+			[/#if]	
+		[/#list]
+
+    <li class="page-item ${nextDisabled}">
+			[#if nextDisabled=="disabled"]
+      <span class="page-link">Next</span>
+			[#else]
+			<a class="page-link" href="/web/guest/wizard-${num+1}">Next</a>
+			[/#if]	
+    </li>
+  </ul>
+</nav>
+</div>

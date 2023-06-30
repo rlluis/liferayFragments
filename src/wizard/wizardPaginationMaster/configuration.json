@@ -1,0 +1,22 @@
+{
+    "fieldSets": [
+			
+					{
+			"fields": [
+				{
+					"dataType": "int",
+					"defaultValue": "1",
+					"label": "number-of-pages",
+					"name": "numberOfPages",
+					"type": "text",
+					"typeOptions": {
+						"validation": {
+							"min": 1,
+							"type": "number"
+						}
+					}
+				}
+			]
+					}
+    ]
+}
