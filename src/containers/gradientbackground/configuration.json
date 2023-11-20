@@ -1,0 +1,29 @@
+{
+  "fieldSets": [
+    {
+      "label": "Gradient",
+			"configurationRole": "style",			
+      "fields": [
+        {
+          "name": "direction",
+          "label": "Direction",
+          "type": "text",
+          "defaultValue": "90deg",
+          "description": "You can use any valid CSS <angle>."
+        },
+        {
+          "label": "Start",
+          "name": "start",
+          "type": "colorPicker",
+          "defaultValue": "#000"
+        },
+        {
+          "label": "End",
+          "name": "end",
+          "type": "colorPicker",
+          "defaultValue": "#fff"
+        }
+      ]
+    }
+  ]
+}
