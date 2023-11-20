@@ -18,7 +18,7 @@ Another way could be to create a CSS a JS and add both in the Master Page config
 The NEWS TICKER will show a scrolling electronic display of a Collecion defined in Liferay, now also compatible with LXC!. You will be able to:
 
  - Configure the Collection
- - Configure a template to show the items of the collection (WARNING: there's a dependency with [Evan's article template contributor (stop using ServiceLocator)][3] HOWEVER, if you don't have this module (like in LXC) it will still be compatible as in case the module is missing it will call the HEADLESS layer
+ - Configure a template to show the items of the collection (WARNING: to get this I am using the restClient to call the headless layer so you will need at least LR 7.4 u50)
  - Define the Text Color of the left part (ej. Breaking News:). This color will also be applied as a border for the full news ticker and for a dot separing each headline
  - Define the background color of the left part
  - Define the Text Color of the right part (the headlines from the Collection)
