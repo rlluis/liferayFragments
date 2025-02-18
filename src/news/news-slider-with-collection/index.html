@@ -25,6 +25,20 @@ function loadRenderedContent(divID,content,template) {
 
 }
 </script>
+<style type="text/css">
+.${fragmentEntryLinkNamespace}_mainContainer .btn{
+  background-color:${configuration.backButtonColor.rgbValue};
+  color:${configuration.frontButtonColor.rgbValue};
+}
+${fragmentEntryLinkNamespace}_mainContainer .slick-dots li.slick-active button:before
+{
+	color: ${configuration.backButtonColor.rgbValue};
+}
+${fragmentEntryLinkNamespace}_mainContainer .slick-dots li button:before
+{	
+	color: ${configuration.backButtonColor.rgbValue};
+}
+</style>
 <div class="${fragmentEntryLinkNamespace}_mainContainer mainContainer">
 	<div class="${fragmentEntryLinkNamespace}_buttonsWrapper buttonsWrapper container">
 
