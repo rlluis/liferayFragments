@@ -1,0 +1,16 @@
+{
+   "fieldSets": [
+      {
+         "fields": [
+               {
+                  "name": "NumberSlides",
+                  "label": "Number of Slides",
+                  "description": "Number of Slides",
+                  "type": "text",
+                  "dataType": "string",
+                  "defaultValue": "3"
+               }
+         ]
+      }
+   ]
+}
