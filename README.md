@@ -63,6 +63,9 @@ News-Slider-with-collection is just a variation of the SLIDER: similar to the Ti
  - In the Templates folder there is an example of a template that you can use (with also a News Structure)
  - NOTE: This alternative is more stable than the other slider, but it's a little bit less fancy as you still need a template.
  
+
+ ![liferayFragments](/images/BootstrapCarousel.png)
+
  Bootstrap-XXXX is the Bootstrap 4 original SLIDER: we are using the minium possible code in order for the Bootstrap 4 Carousel example to work. Some things are required:
  
   - JQuery is required for this to work (enable it in System Settings)
