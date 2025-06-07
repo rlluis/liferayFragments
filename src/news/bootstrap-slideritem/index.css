@@ -1,2 +1,8 @@
-.fragment_9904 {
+.mymycarousel-item img.carIMG{
+	object-fit: cover;
+	object-position: center;
+}
+.mymycarousel-item .carousel-caption{
+	padding-left:1em;
+	padding-right:1em;
 }

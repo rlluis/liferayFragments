@@ -3,6 +3,46 @@
 		{
 			"fields": [
 				{
+	        "name": "imgHeight",
+          "label": "Height of Image",
+          "description": "Height of Image in pixels",
+          "type": "text",
+          "dataType": "string",
+          "defaultValue": "400"				
+				},
+        {
+          "name": "captionBgColorR",
+          "label": "Caption Background Color Red",
+          "description": "Caption Background Color Red Part",
+          "type": "text",					
+          "dataType": "int",
+          "defaultValue": "120"
+        },
+        {
+          "name": "captionBgColorG",
+          "label": "Caption Background Color Green",
+          "description": "Caption Background Color Green Part",
+          "type": "text",					
+          "dataType": "int",
+          "defaultValue": "120"
+        },
+        {
+          "name": "captionBgColorB",
+          "label": "Caption Background Color Blue",
+          "description": "Caption Background Color Blue Part",
+          "type": "text",					
+          "dataType": "int",
+          "defaultValue": "120"
+        },				
+				{
+	        "name": "captionTransparency",
+          "label": "Transparency of Caption",
+          "description": "Transparency of Caption from 0 to 1",
+          "type": "text",
+          "dataType": "string",
+          "defaultValue": "0.5"				
+				},				
+				{
 					"dataType": "string",
 					"defaultValue": "h1",
 					"label": "heading-level",

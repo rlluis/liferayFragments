@@ -3,13 +3,49 @@
       {
          "fields": [
                {
+                  "name": "showIndicators",
+                  "label": "Show Indicators",
+                  "description": "Decide if indicators are shown",
+                  "type": "checkbox",
+                  "defaultValue": true
+               },
+               {
+                  "name": "showControls",
+                  "label": "Show Controls",
+                  "description": "Decide if controls are shown",
+                  "type": "checkbox",
+                  "defaultValue": true
+               },					 
+					 		{
                   "name": "NumberSlides",
                   "label": "Number of Slides",
                   "description": "Number of Slides",
                   "type": "text",
                   "dataType": "string",
                   "defaultValue": "3"
-               }
+               },
+					 		{
+                  "name": "dataInterval",
+                  "label": "Interval between slides",
+                  "description": "Interval in MS between slides",
+                  "type": "text",
+                  "dataType": "string",
+                  "defaultValue": "5000"
+							},
+               {
+                  "name": "carouselFade",
+                  "label": "Fade Transition",
+                  "description": "Activate Fade Transition instead of slide",
+                  "type": "checkbox",
+                  "defaultValue": false
+               },
+               {
+                  "name": "carouselAutoPlay",
+                  "label": "Play Carousel Automatically",
+                  "description": "Play Carousel Automatically once loaded",
+                  "type": "checkbox",
+                  "defaultValue": true
+               }					 
          ]
       }
    ]
