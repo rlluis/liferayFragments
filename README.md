@@ -71,7 +71,7 @@ Bootstrap-XXXX is the Bootstrap 4 original SLIDER: we are using the minium possi
   - You need to click on the Bootrsap-SliderSourroundings and configure it with the number of items (this is for the indicators in the bottom)
   - You need to click on the Collection Display and configure it with No Pagination, and then as "Number of Items to Display" exactly the same ones you have added on the last step (so indicators and item match)
   - Finally you need to click on the Bootstrap-item and add a class under the Advanced tab called "mycarousel-item" (this is required for a JS that it's inside the bootstrap-sliderfinaladjustment fragment)
-  - The last step is to add the bootstrap-sliderfinaladjustment at the end of the page. Anyways this JS only runs once the page is ready. It will add the needed class ("carousel-item") to the div that is two divs above the one that gets generated for each item, so we are respecting what Bootstrap is expecting
+  - You have different configurations in both the Carousel Sourroundings and Carousel Item
 
 Finally you'll get this:
 
