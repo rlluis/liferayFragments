@@ -46,7 +46,8 @@
                   "type": "checkbox",
                   "defaultValue": true
                }					 
-         ]
+         ],
+				"label": "Carousel Wrapper Options"
       }
    ]
 }

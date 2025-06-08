@@ -11,6 +11,13 @@
           "defaultValue": "400"				
 				},
         {
+         "name": "showCaption",
+         "label": "Show Caption",
+         "description": "Decide if Caption of Carousel is shown",
+         "type": "checkbox",
+         "defaultValue": true
+        },				
+        {
           "name": "captionBgColorR",
           "label": "Caption Background Color Red",
           "description": "Caption Background Color Red Part",
@@ -41,7 +48,23 @@
           "type": "text",
           "dataType": "string",
           "defaultValue": "0.5"				
-				},				
+				},	
+				{
+	        "name": "captionPadding",
+          "label": "Padding between Title & Heading",
+          "description": "Padding between Title & Heading (number of EM)",
+          "type": "text",
+          "dataType": "string",
+          "defaultValue": "0.5"				
+				},	
+				{
+	        "name": "captionLateralPadding",
+          "label": "Caption Padding between Background",
+          "description": "Caption Padding between Background (number of EM)",
+          "type": "text",
+          "dataType": "string",
+          "defaultValue": "1"				
+				},					
 				{
 					"dataType": "string",
 					"defaultValue": "h1",
@@ -72,7 +95,7 @@
 					}
 				}
 			],
-			"label": "heading-options"
+			"label": "Carousel Item Options"
 		}
 	]
 }
