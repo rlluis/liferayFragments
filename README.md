@@ -72,6 +72,7 @@ Bootstrap-XXXX is the Bootstrap 4 original SLIDER: we are using the minium possi
   - You need to click on the Collection Display and configure it with No Pagination, and then as "Number of Items to Display" exactly the same ones you have added on the last step (so indicators and item match)
   - Finally you need to click on the Bootstrap-item and add a class under the Advanced tab called "mycarousel-item" (this is required for a JS that it's inside the bootstrap-sliderfinaladjustment fragment)
   - You have different configurations in both the Carousel Sourroundings and Carousel Item
+  - For the Edit mode to work we have a MutationObserver (Javascript) which will be triggered once LR makes the Collection and anything inside available to JQuery. Then we can add one "active" element also in Edit Mode so the Carousel is well shown. Arrows, Indicators, etc. won't work in Edit mode, that's known as Liferay deactivates that so you can map, etc.
 
 Finally you'll get this:
 
