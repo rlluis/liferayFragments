@@ -15,10 +15,10 @@ const observer = new MutationObserver((mutationsList, observer) => {
 }); 
 
 function initializeSlider(){
-		var mySize=$(".mycarousel-item").length;
+		var mySize=$("#" + fragmentElement.id + " .mycarousel-item").length;
 		var active="active";
 		for (var i=0;i<mySize;i++){		
-			$(".mycarousel-item")[i].closest('.align-items-undefined').className += " carousel-item " + active;
+			$("#" + fragmentElement.id + " .mycarousel-item")[i].closest('.align-items-undefined').className += " carousel-item " + active;
 			active="";
 		}
 }
@@ -26,14 +26,15 @@ function initializeSlider(){
 
 $( document ).ready(function() {	
 	if (layoutMode=='view'){
-		var mySize=$(".mycarousel-item").length;
+		var mySize=$("#" + fragmentElement.id + " .mycarousel-item").length;
 		var active="active";
 		for (var i=0;i<mySize;i++){
-			$(".mycarousel-item")[i].parentNode.parentNode.className += " carousel-item " + active;
+			$("#" + fragmentElement.id + " .mycarousel-item")[i].parentNode.parentNode.className += " carousel-item " + active;
 			active="";
 		}		
 	}else{
-		const elementNode = document.querySelector('.carousel-inner').querySelector('.lfr-layout-structure-item-collection');
+
+		const elementNode = fragmentElement.querySelector('.carousel-inner').querySelector('.lfr-layout-structure-item-collection');
 
 		observer.observe(elementNode, { 
     	attributes: false, 

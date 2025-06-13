@@ -1,13 +1,13 @@
 <style type="text/css">
-.mymycarousel-item img.carIMG{
+#${fragmentElementId} .mymycarousel-item img.carIMG{
 	max-height:${configuration.imgHeight}px;
 }
-.mymycarousel-item .carousel-caption{
+#${fragmentElementId} .mymycarousel-item .carousel-caption{
 	background-color: rgba(${configuration.captionBgColorR},${configuration.captionBgColorG},${configuration.captionBgColorB}, ${configuration.captionTransparency});
 	padding-left: ${configuration.captionLateralPadding}em;
 	padding-right: ${configuration.captionLateralPadding}em;
 }	
-.mymycarousel-item .carousel-caption .component-heading{
+#${fragmentElementId} .mymycarousel-item .carousel-caption .component-heading{
 	padding-bottom: ${configuration.captionPadding}em;
 }
 </style>
@@ -25,3 +25,4 @@
 		</div>
 	[/#if]
 </div>
+
