@@ -1,101 +1,97 @@
 {
-	"fieldSets": [
-		{
-			"fields": [
-				{
-	        "name": "imgHeight",
-          "label": "Height of Image",
-          "description": "Height of Image in pixels",
+  "fieldSets": [
+    {
+      "fields": [
+        {
+          "name": "imgHeight",
+          "label": "Image Height",
+          "description": "Height of the image in pixels.",
           "type": "text",
           "dataType": "string",
-          "defaultValue": "400"				
-				},
+          "defaultValue": "700"
+        },
         {
-         "name": "showCaption",
-         "label": "Show Caption",
-         "description": "Decide if Caption of Carousel is shown",
-         "type": "checkbox",
-         "defaultValue": true
-        },				
+          "name": "showCaption",
+          "label": "Show Caption",
+          "description": "Toggle the visibility of the carousel caption.",
+          "type": "checkbox",
+          "defaultValue": true
+        },
+        {
+          "name": "showButton",
+          "label": "Show Button",
+          "description": "Toggle the visibility of the carousel button.",
+          "type": "checkbox",
+          "defaultValue": true
+        },
         {
           "name": "captionBgColorR",
-          "label": "Caption Background Color Red",
-          "description": "Caption Background Color Red Part",
-          "type": "text",					
+          "label": "Caption Background Color (Red)",
+          "description": "Red component of the caption background color (0–255).",
+          "type": "text",
           "dataType": "int",
-          "defaultValue": "120"
+          "defaultValue": "0"
         },
         {
           "name": "captionBgColorG",
-          "label": "Caption Background Color Green",
-          "description": "Caption Background Color Green Part",
-          "type": "text",					
+          "label": "Caption Background Color (Green)",
+          "description": "Green component of the caption background color (0–255).",
+          "type": "text",
           "dataType": "int",
-          "defaultValue": "120"
+          "defaultValue": "0"
         },
         {
           "name": "captionBgColorB",
-          "label": "Caption Background Color Blue",
-          "description": "Caption Background Color Blue Part",
-          "type": "text",					
+          "label": "Caption Background Color (Blue)",
+          "description": "Blue component of the caption background color (0–255).",
+          "type": "text",
           "dataType": "int",
-          "defaultValue": "120"
-        },				
-				{
-	        "name": "captionTransparency",
-          "label": "Transparency of Caption",
-          "description": "Transparency of Caption from 0 to 1",
+          "defaultValue": "0"
+        },
+        {
+          "name": "captionTransparency",
+          "label": "Caption Transparency",
+          "description": "Transparency level of the caption background (0 to 1).",
           "type": "text",
           "dataType": "string",
-          "defaultValue": "0.5"				
-				},	
-				{
-	        "name": "captionPadding",
-          "label": "Padding between Title & Heading",
-          "description": "Padding between Title & Heading (number of EM)",
+          "defaultValue": "0.6"
+        },
+        {
+          "name": "captionPadding",
+          "label": "Vertical Caption Padding",
+          "description": "Vertical spacing between the caption title and heading (in em units).",
           "type": "text",
           "dataType": "string",
-          "defaultValue": "0.5"				
-				},	
-				{
-	        "name": "captionLateralPadding",
-          "label": "Caption Padding between Background",
-          "description": "Caption Padding between Background (number of EM)",
+          "defaultValue": "0.5"
+        },
+        {
+          "name": "captionLateralPadding",
+          "label": "Horizontal Caption Padding",
+          "description": "Horizontal padding between the caption and its background (in em units).",
           "type": "text",
           "dataType": "string",
-          "defaultValue": "1"				
-				},					
-				{
-					"dataType": "string",
-					"defaultValue": "h1",
-					"label": "heading-level",
-					"name": "headingLevel",
-					"type": "select",
-					"typeOptions": {
-						"validValues": [
-							{
-								"value": "h1"
-							},
-							{
-								"value": "h2"
-							},
-							{
-								"value": "h3"
-							},
-							{
-								"value": "h4"
-							},
-							{
-								"value": "h5"
-							},
-							{
-								"value": "h6"
-							}
-						]
-					}
-				}
-			],
-			"label": "Carousel Item Options"
-		}
-	]
+          "defaultValue": "1"
+        },
+        {
+          "name": "headingLevel",
+          "label": "Heading Level",
+          "description": "Select the HTML heading level to use for the caption title.",
+          "type": "select",
+          "dataType": "string",
+          "defaultValue": "h1",
+          "typeOptions": {
+            "validValues": [
+              { "value": "h1" },
+              { "value": "h2" },
+              { "value": "h3" },
+              { "value": "h4" },
+              { "value": "h5" },
+              { "value": "h6" }
+            ]
+          }
+        }
+      ],
+      "label": "Carousel Item Options"
+    }
+  ]
 }

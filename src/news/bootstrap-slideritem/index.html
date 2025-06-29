@@ -1,28 +1,38 @@
 <style type="text/css">
-#${fragmentElementId} .mymycarousel-item img.carIMG{
-	max-height:${configuration.imgHeight}px;
-}
-#${fragmentElementId} .mymycarousel-item .carousel-caption{
-	background-color: rgba(${configuration.captionBgColorR},${configuration.captionBgColorG},${configuration.captionBgColorB}, ${configuration.captionTransparency});
-	padding-left: ${configuration.captionLateralPadding}em;
-	padding-right: ${configuration.captionLateralPadding}em;
-}	
-#${fragmentElementId} .mymycarousel-item .carousel-caption .component-heading{
-	padding-bottom: ${configuration.captionPadding}em;
-}
+    #${fragmentElementId} .inner-carousel-item .inner-carousel-image {
+        max-height: ${configuration.imgHeight}px;
+    }
+    #${fragmentElementId} .inner-carousel-item .carousel-caption {
+        background-color: rgba(${configuration.captionBgColorR},${configuration.captionBgColorG},${configuration.captionBgColorB}, ${configuration.captionTransparency});
+        padding-left: ${configuration.captionLateralPadding}em;
+        padding-right: ${configuration.captionLateralPadding}em;
+    }
+    #${fragmentElementId} .inner-carousel-item .carousel-caption .component-heading {
+        padding-bottom: ${configuration.captionPadding}em;
+    }
 </style>
-<div class="mymycarousel-item">
-	<img data-lfr-editable-id="${fragmentEntryLinkNamespace}imgFondo" data-lfr-editable-type="image" class="d-block w-100 carIMG" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAHgAAABECAYAAABK3PEEAAAACXBIWXMAAC4jAAAuIwF4pT92AAABBUlEQVR4Xu3VAQkAIBDFUO0fRLCD2RSM8dg12Mbn5trnjo41MAvMtv1gBbb7FhjvW+AC6wZwvn5wgXEDOF4LLjBuAMdrwQXGDeB4LbjAuAEcrwUXGDeA47XgAuMGcLwWXGDcAI7XgguMG8DxWnCBcQM4XgsuMG4Ax2vBBcYN4HgtuMC4ARyvBRcYN4DjteAC4wZwvBZcYNwAjteCC4wbwPFacIFxAzheCy4wbgDHa8EFxg3geC24wLgBHK8FFxg3gOO14ALjBnC8Flxg3ACO14ILjBvA8VpwgXEDOF4LLjBuAMdrwQXGDeB4LbjAuAEcrwUXGDeA47XgAuMGcLwWXGDcAI73ADVez7kdh2y/AAAAAElFTkSuQmCC" alt=""/>
-	[#if configuration.showCaption]				 		
-		<div class="carousel-caption d-none d-md-block">
-			<${configuration.headingLevel} class="component-heading text-break" data-lfr-editable-id="${fragmentEntryLinkNamespace}element-heading"
-			data-lfr-editable-type="text">
-			Heading Example
-			</${configuration.headingLevel}>
-			<div class="clearfix component-paragraph text-break" data-lfr-editable-id="${fragmentEntryLinkNamespace}element-text" data-lfr-editable-type="rich-text">
-				Paragraph example
-			</div>
-		</div>
-	[/#if]
+<div class="inner-carousel-item">
+    <img data-lfr-editable-id="${fragmentEntryLinkNamespace}-carousel-image"
+            data-lfr-editable-type="image" class="d-block w-100 inner-carousel-image"
+            src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAHgAAABECAYAAABK3PEEAAAACXBIWXMAAC4jAAAuIwF4pT92AAABBUlEQVR4Xu3VAQkAIBDFUO0fRLCD2RSM8dg12Mbn5trnjo41MAvMtv1gBbb7FhjvW+AC6wZwvn5wgXEDOF4LLjBuAMdrwQXGDeB4LbjAuAEcrwUXGDeA47XgAuMGcLwWXGDcAI7XgguMG8DxWnCBcQM4XgsuMG4Ax2vBBcYN4HgtuMC4ARyvBRcYN4DjteAC4wZwvBZcYNwAjteCC4wbwPFacIFxAzheCy4wbgDHa8EFxg3geC24wLgBHK8FFxg3gOO14ALjBnC8Flxg3ACO14ILjBvA8VpwgXEDOF4LLjBuAMdrwQXGDeB4LbjAuAEcrwUXGDeA47XgAuMGcLwWXGDcAI73ADVez7kdh2y/AAAAAElFTkSuQmCC"
+            alt=""/>
+    [#if configuration.showCaption]
+    <div class="carousel-caption d-none d-md-block">
+        <${configuration.headingLevel} class="component-heading text-break"
+        data-lfr-editable-id="${fragmentEntryLinkNamespace}-carousel-heading"
+        data-lfr-editable-type="text">
+        Heading Example
+        </${configuration.headingLevel}>
+        <div class="clearfix component-paragraph text-break"
+            data-lfr-editable-id="${fragmentEntryLinkNamespace}-carousel-text"
+            data-lfr-editable-type="rich-text">
+        Paragraph example
+        </div>
+    [#if configuration.showButton]
+			<a class="btn btn-primary" data-lfr-editable-id="${fragmentEntryLinkNamespace}-carousel-button" data-lfr-editable-type="link" href="" id="fragment-${fragmentEntryLinkNamespace}-button">
+				Go Somewhere
+			</a>
+    [/#if]
+    </div>
+    [/#if]
 </div>
-

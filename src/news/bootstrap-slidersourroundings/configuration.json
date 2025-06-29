@@ -1,53 +1,53 @@
 {
-   "fieldSets": [
-      {
-         "fields": [
-               {
-                  "name": "showIndicators",
-                  "label": "Show Indicators",
-                  "description": "Decide if indicators are shown",
-                  "type": "checkbox",
-                  "defaultValue": true
-               },
-               {
-                  "name": "showControls",
-                  "label": "Show Controls",
-                  "description": "Decide if controls are shown",
-                  "type": "checkbox",
-                  "defaultValue": true
-               },					 
-					 		{
-                  "name": "NumberSlides",
-                  "label": "Number of Slides",
-                  "description": "Number of Slides",
-                  "type": "text",
-                  "dataType": "string",
-                  "defaultValue": "3"
-               },
-					 		{
-                  "name": "dataInterval",
-                  "label": "Interval between slides",
-                  "description": "Interval in MS between slides",
-                  "type": "text",
-                  "dataType": "string",
-                  "defaultValue": "5000"
-							},
-               {
-                  "name": "carouselFade",
-                  "label": "Fade Transition",
-                  "description": "Activate Fade Transition instead of slide",
-                  "type": "checkbox",
-                  "defaultValue": false
-               },
-               {
-                  "name": "carouselAutoPlay",
-                  "label": "Play Carousel Automatically",
-                  "description": "Play Carousel Automatically once loaded",
-                  "type": "checkbox",
-                  "defaultValue": true
-               }					 
-         ],
-				"label": "Carousel Wrapper Options"
-      }
-   ]
+  "fieldSets": [
+    {
+      "fields": [
+        {
+          "name": "showIndicators",
+          "label": "Show Indicators",
+          "description": "Toggle the visibility of navigation indicators.",
+          "type": "checkbox",
+          "defaultValue": true
+        },
+        {
+          "name": "showControls",
+          "label": "Show Controls",
+          "description": "Toggle the visibility of previous and next controls.",
+          "type": "checkbox",
+          "defaultValue": true
+        },
+        {
+          "name": "NumberSlides",
+          "label": "Number of Slides",
+          "description": "Specify the total number of slides in the carousel.",
+          "type": "text",
+          "dataType": "string",
+          "defaultValue": "3"
+        },
+        {
+          "name": "dataInterval",
+          "label": "Interval Between Slides",
+          "description": "Set the time interval (in milliseconds) between automatic slide transitions.",
+          "type": "text",
+          "dataType": "string",
+          "defaultValue": "3500"
+        },
+        {
+          "name": "carouselFade",
+          "label": "Fade Transition",
+          "description": "Use a fade effect instead of sliding between slides.",
+          "type": "checkbox",
+          "defaultValue": false
+        },
+        {
+          "name": "carouselAutoPlay",
+          "label": "Autoplay Carousel",
+          "description": "Automatically start transitioning slides when the carousel loads.",
+          "type": "checkbox",
+          "defaultValue": true
+        }
+      ],
+      "label": "Carousel Wrapper Options"
+    }
+  ]
 }

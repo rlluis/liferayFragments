@@ -1,4 +1,22 @@
-.mymycarousel-item img.carIMG{
+.carousel-inner .row {
+	margin-left: 0px !important;
+}
+
+.carousel-inner .row .col {
+	padding-left: 0px !important;
+}
+
+.carousel-item .col {
+	padding-right: 0px;
+	padding-left: 0px;
+}
+
+.inner-carousel-item .inner-carousel-image {
 	object-fit: cover;
 	object-position: center;
+}
+
+.inner-carousel-item .btn {
+	margin-top: 1em;
+	margin-bottom: 1em;
 }
