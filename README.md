@@ -70,7 +70,6 @@ Bootstrap-XXXX is the Bootstrap 4 original SLIDER: we are using the minium possi
   - In a page you will add first the Bootstrap-SliderSourroundings. Then a Collection Display inside the drop zone we are given. Then a Bootstrap-item inside of the Coolection Display drop zone.
   - You need to click on the Bootrsap-SliderSourroundings and configure it with the number of items (this is for the indicators in the bottom)
   - You need to click on the Collection Display and configure it with No Pagination, and then as "Number of Items to Display" exactly the same ones you have added on the last step (so indicators and item match)
-  - Finally you need to click on the Bootstrap-item and add a class under the Advanced tab called "mycarousel-item" (this is required for a JS that it's inside the bootstrap-sliderfinaladjustment fragment)
   - You have different configurations in both the Carousel Sourroundings and Carousel Item
   - For the Edit mode to work we have a MutationObserver (Javascript) which will be triggered once LR makes the Collection and anything inside available to JQuery. Then we can add one "active" element also in Edit Mode so the Carousel is well shown. Arrows, Indicators, etc. won't work in Edit mode, that's known as Liferay deactivates that so you can map, etc.
   - If you need more flexibility on each slide, specifically on the Title and Subtitle part (Ex. a button, link or similar) you can simply add a Liferay's drag zone instead, in the end the code is yours, adapt it to your use case!
