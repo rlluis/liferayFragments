@@ -70,13 +70,30 @@ const observer = new MutationObserver((mutationsList, observer) => {
 $(function() {
   initializeSlider();
 });																									 
-[/#if]																											 
+[/#if]				
 function initializeSlider(){
-	var coll=$('.${fragmentEntryLinkNamespace}_mainContainer').find('.lfr-layout-structure-item-collection');
+	var coll = $('.${fragmentEntryLinkNamespace}_mainContainer').find('.lfr-layout-structure-item-collection');
+	var rows = coll.find('.row');
+	var sliderCandidate;
 
-	coll.find('.row').wrapAll( "<div class='" +${fragmentEntryLinkNamespace}_sliderName +"' />");
-  
-	sliderCandidate = coll.find("."+${fragmentEntryLinkNamespace}_sliderName);
+	if (rows.length === 1) {
+		// If there's one row, check for columns inside to treat as slides.
+		var singleRow = $(rows[0]);
+		var cols = singleRow.find('.col, [class*="col-"]');
+
+		if (cols.length > 0) {
+			// Wrap the columns in the slider div, then replace the original row with this new slider.
+			cols.wrapAll("<div class='" + ${fragmentEntryLinkNamespace}_sliderName + "' />");
+			sliderCandidate = singleRow.find("." + ${fragmentEntryLinkNamespace}_sliderName);
+			singleRow.replaceWith(sliderCandidate);
+		}
+	}
+	
+	// If sliderCandidate is not set (e.g. multiple rows), use the default behavior.
+	if (!sliderCandidate || sliderCandidate.length === 0) {
+		rows.wrapAll("<div class='" + ${fragmentEntryLinkNamespace}_sliderName + "' />");
+		sliderCandidate = coll.find("." + ${fragmentEntryLinkNamespace}_sliderName);
+	}
 
 	$(sliderCandidate).slick({
     autoplay: ${fragmentEntryLinkNamespace}_sliderAutoplay,
@@ -99,7 +116,7 @@ function initializeSlider(){
 	[#if (is_edit_mode)]
 	observer.disconnect();
 	[/#if] 
-} 
+} 																							 
 [#if (is_edit_mode)]
 const elementNode = document.querySelector('.${fragmentEntryLinkNamespace}_mainContainer').querySelector('.lfr-layout-structure-item-collection');
 
